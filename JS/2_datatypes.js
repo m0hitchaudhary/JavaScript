@@ -14,3 +14,4 @@ let state = null
 
 console.log(typeof null) //returns object
 console.log(typeof undefined) //returns undefined
+console.log(typeof age) //returns number

@@ -1,4 +1,4 @@
-// let arr = [0,1,2,3,4,5]
+// let arr = [0,1,2,3,4,5] //old method
 
 let arr = new Array(0,1,2,3,4,5)
 // console.log(arr)

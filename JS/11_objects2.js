@@ -54,10 +54,33 @@ const user = [
 
 // console.log(user[2].email)
 
-console.log(Object.keys(tinderUser))
+// console.log(Object.keys(tinderUser))
 
 
-console.log(Object.values(tinderUser))
+// console.log(Object.values(tinderUser))
 
 
-console.log(Object.entries(tinderUser)) //returns all the 'key-value' pairs in an array
+// console.log(Object.entries(tinderUser)) //returns all the 'key-value' pairs in an array
+
+//Object de-structuring
+
+const course = {
+    name : "B.Tech",
+    courseInstructor : "Mohit"
+}
+
+// console.log(course.courseInstructor)
+
+//instead of writing this whole long statement we can de-structuring
+
+const {courseInstructor} = course
+
+//now we can just use 'courseInstructor' to print it's value
+
+// console.log(courseInstructor)
+
+//we can also assign another identifier to print courseInstructor
+
+const {name : n} = course //syntax
+
+console.log(n)

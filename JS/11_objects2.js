@@ -83,4 +83,4 @@ const {courseInstructor} = course
 
 const {name : n} = course //syntax
 
-console.log(n)
+// console.log(n)

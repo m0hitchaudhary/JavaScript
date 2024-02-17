@@ -1,2 +1,1 @@
-# JavaScript
-Using this repository I'm learning JavaScript
+This is repository for all my JavaScript codes

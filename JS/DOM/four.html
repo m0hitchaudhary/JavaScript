@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+
+    //below is a function to append new list items using DOM
+
+    function newlang(lang){
+        let li = document.createElement('li')
+        li.innerHTML = `${lang}`
+        let ul = document.querySelector('.language')
+        ul.appendChild(li)
+    }
+
+    newlang('C++')
+
+    //below is an optimised version, it doesn't traverse the whole list, it just append the created item at the end of the list and then append the changes to the parent element
+
+    optLang = (new_lang) => {
+        let li = document.createElement('li')
+        li.appendChild(document.createTextNode(new_lang))
+        document.querySelector('.language').appendChild(li)
+    }
+
+    optLang('Python')
+
+    //EDIT
+
+
+    //just replacing the innerHTML content simply
+    let firstEle = document.querySelector('li:nth-child(1)')
+    console.log(firstEle)
+    firstEle.innerHTML = 'C#'
+
+
+    //using replacewith() method
+    let new_lang = document.createElement('li')
+    new_lang.textContent = "C#"
+    firstEle.replaceWith(new_lang)
+
+
+    // using outerHTML
+    let second_lang = document.querySelector('li:nth-child(2)')
+    second_lang.outerHTML = '<li>Golang</li>'
+
+
+    //DELETING AN ELEMENT
+ 
+    document.querySelector('li:last-child').remove()
+</script>
+</html>

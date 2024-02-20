@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Element Using DOM</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const div = document.createElement('div')
+    console.log(div)
+    document.body.append(div) //to attach the created element to the body of our document
+    div.className = 'div tag'
+    div.id = Math.round(Math.random() * 10 + 1)
+    div.setAttribute('title', 'creating div using DOM') //this method can be used to set attributes for the div ele & it is quite a good practice
+    div.style.backgroundColor = 'beige'
+    div.style.padding = '30px'
+    // div.innerText = 'A div element created using DOM'
+    let text = document.createTextNode('A div element created using DOM')
+
+//both method mentioned in line 20 & 21 can be used to add an innerHTML or innerText element to the div element
+//we have just tried to optimize the code, in line 20 there are two round trips( (1) it goes to the target ele and fetches the value, (2) it then overwrites the value, thus, resulting in two round trips)
+//in line 21 there is only one round trip, it creates an element and then sets the value
+
+    div.appendChild(text)
+    div.style.border = '5px solid'
+    div.style.borderRadius = '10px'
+</script>
+</html>

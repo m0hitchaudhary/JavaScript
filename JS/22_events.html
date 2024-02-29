@@ -17,4 +17,54 @@
             <li style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif;"><a style="color: aliceblue;" href="https://google.com" id="google">Want to Google about them?</a></li>
         </ul>
    </div>
+
+   <script>
+
+        // document.getElementById('rolls').addEventListener('click', (e) => {
+        //     console.log(e.target.id," was selected!")
+        // }, false)
+
+        //in the above code 'false' value signifies the propagation flow, 'false' = event bubbling(i.e from bottom to top), while 'true' = event capturing(i.e from bottom to top)
+
+        // document.getElementById('images').addEventListener('click', (e) => {
+        //     console.log('An element was selected!')
+        // }, false)
+
+        // document.getElementById('ferrari').addEventListener('click', (e) => {
+        //     console.log('Ferrari was selected!')
+                // e.stopPropagation();
+        // }, false)
+
+
+
+        //------In the above code the flow will go from bottom to top
+
+
+
+        // document.getElementById('images').addEventListener('click', (e) => {
+        //     console.log('An element was selected!')
+        //     e.stopPropagation(); //this method is used to stop the propogation of the event, it will just stop here and won't go any further
+        // }, true)
+
+        // document.getElementById('ferrari').addEventListener('click', (e) => {
+        //     console.log('Ferrari was selected!')
+        // }, true)
+
+
+        //---In the above case event caputuring will be followed
+
+
+        // document.getElementById('google').addEventListener('click', (e) => {
+        //     e.preventDefault(); //this method is used to prevent the default way of operation
+        //     console.log('Default behaviour restricted!!')
+        // })
+
+
+        document.querySelector('#images').addEventListener('click', (e) => {
+            if(e.target.tagName == 'IMG'){ //this statement gives us the tag that is used in a  particular element so that we can maipulate the output!!
+                let removeIt = e.target.parentNode;
+                removeIt.remove();
+            }
+        })
+   </script>
 </html>

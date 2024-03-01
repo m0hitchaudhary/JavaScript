@@ -16,5 +16,3 @@
 //(1) First the call stack is made, then the functions are called one after the other.
 //(2) Then the function is sent to the WEB APIs where it goes into the task queue while the other functions operate at normal pace.
 //(3) When the task is completed then it pushed from task queue to the main call stack. Thus making the flow more smoother and multi-threaded.
-
-//NOTE - fetch() have it's own task queue known as high-priority queue because it has promises in it.
